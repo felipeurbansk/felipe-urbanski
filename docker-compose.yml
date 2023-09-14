@@ -1,0 +1,15 @@
+version: '3'
+services:
+  anotai-mongodb:
+    image: mongo:latest
+    container_name: anotai-mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb-data:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGODB_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGODB_PASSWORD}
+
+volumes:
+  mongodb-data:
