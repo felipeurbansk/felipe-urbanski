@@ -1,4 +1,5 @@
 import GetCategoryByIdService from "@categories/services/GetCategoryByIdService";
+import ProductCreatedPublisher from "@products/amqp/pub/ProductCreatedPublisher";
 import {
   ICreateProduct,
   IProduct,
@@ -10,19 +11,23 @@ export default class CreateProductUseCase {
   private createProductService: CreateProductService;
   private getUserByIdService: GetUserByIdService;
   private getCategoryByIdService: GetCategoryByIdService;
+  private productCreatedPublisher: ProductCreatedPublisher;
 
   constructor({
     createProductService,
     getUserByIdService,
     getCategoryByIdService,
+    productCreatedPublisher,
   }: {
     createProductService: CreateProductService;
     getUserByIdService: GetUserByIdService;
     getCategoryByIdService: GetCategoryByIdService;
+    productCreatedPublisher: ProductCreatedPublisher;
   }) {
     this.createProductService = createProductService;
     this.getUserByIdService = getUserByIdService;
     this.getCategoryByIdService = getCategoryByIdService;
+    this.productCreatedPublisher = productCreatedPublisher;
   }
 
   public async handle(data: ICreateProduct): Promise<IProduct> {
@@ -56,6 +61,8 @@ export default class CreateProductUseCase {
     persistedUser.products?.push(persistedProduct);
 
     await persistedUser.save();
+
+    await this.productCreatedPublisher.publish(persistedProduct);
 
     return persistedProduct;
   }
