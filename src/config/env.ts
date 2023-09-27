@@ -14,7 +14,14 @@ export interface IConfig {
   };
   integration: {
     rest: {};
-    amqp: {};
+    amqp: {
+      rabbitMQ: {
+        username: string;
+        password: string;
+        host: string;
+        port: number;
+      };
+    };
   };
 }
 
@@ -38,6 +45,13 @@ export default {
   },
   integration: {
     rest: {},
-    amqp: {},
+    amqp: {
+      rabbitMQ: {
+        host: process.env.RABBITMQ_HOST,
+        username: process.env.RABBITMQ_USERNAME,
+        password: process.env.RABBITMQ_PASSWORD,
+        port: process.env.RABBITMQ_PORT,
+      },
+    },
   },
 };

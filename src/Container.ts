@@ -13,6 +13,8 @@ import {
   asValue,
 } from "awilix";
 import CategoryRepository from "@categories/database/mongo/repositories/CategoryRepository";
+import RabbitMQProvider from "infrastructure/amqp/rabbitmq/RabbitMQProvider";
+import SubscriptionService from "utils/SubscriptionService";
 
 const container = createContainer();
 
@@ -20,10 +22,16 @@ container.register({
   config: asValue(env),
   server: asClass(Server).singleton(),
 
+  // RabbitMQ Provider
+  rabbitMQProvider: asClass(RabbitMQProvider).singleton(),
+
   // Register Repositories
   userRepository: asClass(UserRepository).singleton(),
   productRepository: asClass(ProductRepository).singleton(),
   categoryRepository: asClass(CategoryRepository).singleton(),
+
+  // Utils
+  subscriptionService: asClass(SubscriptionService),
 
   // Schemas
   userSchema: asValue(UserSchema),

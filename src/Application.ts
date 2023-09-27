@@ -9,9 +9,13 @@ export default class Application {
   }
 
   async start() {
-    const { mongooseProvider, server } = this.container.cradle;
+    const { mongooseProvider, server, subscriptionService } =
+      this.container.cradle;
 
     await mongooseProvider.connect();
+
+    /** Initialize AMQP subscriptions */
+    await subscriptionService.initialize();
 
     await server.setup();
   }
