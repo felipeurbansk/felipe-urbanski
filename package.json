@@ -9,6 +9,7 @@
     "dev": "ts-node-dev -r tsconfig-paths/register index.ts"
   },
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.421.0",
     "amqplib": "^0.10.3",
     "awilix": "^8.0.1",
     "awilix-express": "^8.0.0",
