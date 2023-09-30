@@ -27,7 +27,7 @@ services:
       RABBITMQ_DEFAULT_PASS: ${RABBITMQ_PASSWORD}
   
   anotai-localstack:
-    image: localstack/localstack
+    build: ./docker/localstack
     container_name: anotai-localstack
     environment:
       DEBUG: 1
@@ -46,7 +46,6 @@ services:
     volumes:
       - /var/lib/localstack:/var/lib/localstack
       - /var/run/docker.sock:/var/run/docker.sock
-      - ./localstack/init/init-aws.sh:/etc/localstack/init/ready.d/init-aws.sh
 
 volumes: 
   mongodb-data:
