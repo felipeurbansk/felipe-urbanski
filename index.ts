@@ -11,7 +11,6 @@ app
     console.log("Server started");
   })
   .catch((err: Error) => {
-    console.log("Entrou nesse catch");
     console.error(err.stack);
     process.exit(1);
   });

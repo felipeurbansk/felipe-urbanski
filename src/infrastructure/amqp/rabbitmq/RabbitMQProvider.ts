@@ -6,7 +6,6 @@ export default class RabbitMQProvider {
   private config: IConfig;
 
   constructor({ config }: { config: IConfig }) {
-    console.log("Entrou aqui no RabbitMQProvider");
     this.config = config;
   }
 
