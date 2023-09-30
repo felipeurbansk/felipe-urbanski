@@ -1,15 +1,15 @@
 {
     "_type": "export",
     "__export_format": 4,
-    "__export_date": "2023-09-14T18:40:25.839Z",
+    "__export_date": "2023-09-30T22:28:20.113Z",
     "__export_source": "insomnia.desktop.app:v2023.5.8",
     "resources": [
         {
             "_id": "req_ab50d61f7afe44639c9fae8e1be8ea29",
             "parentId": "fld_d53bfa46d3c34aa19b95081b29869654",
-            "modified": 1694715620027,
+            "modified": 1696104066267,
             "created": 1694044764093,
-            "url": "{{ _.baseUrl }}/owners/65034ed874d6314cf57d3910",
+            "url": "{{ _.baseUrl }}/owners/65187e7a78ce80e956b36a2e",
             "name": "Get owners",
             "description": "",
             "method": "GET",
@@ -24,7 +24,7 @@
                     "value": "application/json"
                 },
                 {
-                    "name": "Owner-Agent",
+                    "name": "User-Agent",
                     "value": "Insomnia/2023.5.7"
                 }
             ],
@@ -42,7 +42,7 @@
         {
             "_id": "fld_d53bfa46d3c34aa19b95081b29869654",
             "parentId": "wrk_2736603679d14daf9784f861bcb7513e",
-            "modified": 1694044762284,
+            "modified": 1696103762455,
             "created": 1694044762284,
             "name": "owners",
             "description": "",
@@ -64,7 +64,7 @@
         {
             "_id": "req_e5cfdc45e922481ca9a9568a7163ae76",
             "parentId": "fld_d53bfa46d3c34aa19b95081b29869654",
-            "modified": 1694699050839,
+            "modified": 1696103826981,
             "created": 1694699046133,
             "url": "{{ _.baseUrl }}/owners/all",
             "name": "Get all owners",
@@ -81,7 +81,7 @@
                     "value": "application/json"
                 },
                 {
-                    "name": "Owner-Agent",
+                    "name": "User-Agent",
                     "value": "Insomnia/2023.5.7"
                 }
             ],
@@ -99,7 +99,7 @@
         {
             "_id": "req_b6ef5918303845949190003086f2e073",
             "parentId": "fld_d53bfa46d3c34aa19b95081b29869654",
-            "modified": 1694715527173,
+            "modified": 1696109693592,
             "created": 1694561734405,
             "url": "{{ _.baseUrl }}/owners",
             "name": "Create owner",
@@ -107,7 +107,7 @@
             "method": "POST",
             "body": {
                 "mimeType": "application/json",
-                "text": "{\n\t\"name\": \"Felipe Urbanski\",\n\t\"email\": \"felipeurbansk@gmail.com\"\n}"
+                "text": "{\n\t\"name\": \"Magros Lanches\",\n\t\"email\": \"contato@magroslanches.com\"\n}"
             },
             "parameters": [],
             "headers": [
@@ -116,7 +116,7 @@
                     "value": "application/json"
                 },
                 {
-                    "name": "Owner-Agent",
+                    "name": "User-Agent",
                     "value": "Insomnia/2023.5.7"
                 }
             ],
@@ -134,7 +134,7 @@
         {
             "_id": "req_1fd07a382f964f2ea3c9820b7568a373",
             "parentId": "fld_d53bfa46d3c34aa19b95081b29869654",
-            "modified": 1694715634851,
+            "modified": 1696112591043,
             "created": 1694573161199,
             "url": "{{ _.baseUrl }}/owners",
             "name": "Update owner",
@@ -142,7 +142,7 @@
             "method": "PUT",
             "body": {
                 "mimeType": "application/json",
-                "text": "{\n\t\"_id\": \"65034ed874d6314cf57d3910\",\n\t\"name\": \"Felipe Urbanskii\"\n}"
+                "text": "{\n\t\"_id\": \"65034ed874d6314cf57d3910\",\n\t\"name\": \"King Mek\"\n}"
             },
             "parameters": [],
             "headers": [
@@ -151,7 +151,7 @@
                     "value": "application/json"
                 },
                 {
-                    "name": "Owner-Agent",
+                    "name": "User-Agent",
                     "value": "Insomnia/2023.5.7"
                 }
             ],
@@ -169,7 +169,7 @@
         {
             "_id": "req_11ee93d7a7144feaaa77cdf9b27b587e",
             "parentId": "fld_d53bfa46d3c34aa19b95081b29869654",
-            "modified": 1694715648101,
+            "modified": 1696103842324,
             "created": 1694576262716,
             "url": "{{ _.baseUrl }}/owners",
             "name": "Delete owner",
@@ -186,7 +186,7 @@
                     "value": "application/json"
                 },
                 {
-                    "name": "Owner-Agent",
+                    "name": "User-Agent",
                     "value": "Insomnia/2023.5.7"
                 }
             ],
@@ -221,7 +221,7 @@
                     "value": "application/json"
                 },
                 {
-                    "name": "Owner-Agent",
+                    "name": "User-Agent",
                     "value": "Insomnia/2023.5.7"
                 }
             ],
@@ -268,7 +268,7 @@
                     "value": "application/json"
                 },
                 {
-                    "name": "Owner-Agent",
+                    "name": "User-Agent",
                     "value": "Insomnia/2023.5.7"
                 }
             ],
@@ -286,7 +286,7 @@
         {
             "_id": "req_438759992fdd45868774960d84fa1722",
             "parentId": "fld_79d0166fdcdf48e0abdbc007ed1ac175",
-            "modified": 1694715806078,
+            "modified": 1696112805541,
             "created": 1694637393622,
             "url": "{{ _.baseUrl }}/products",
             "name": "Create product",
@@ -294,7 +294,7 @@
             "method": "POST",
             "body": {
                 "mimeType": "application/json",
-                "text": "{\n\t\"title\": \"Roteador Wi-Fi\",\n\t\"description\": \"Roteador para acelerar a sua internet\",\n\t\"price\": 299.20,\n\t\"owner_id\": \"65034f0c74d6314cf57d391b\"\n}"
+                "text": "{\n\t\"title\": \"Combo Wrapper 3\",\n\t\"description\": \"2 humburguer, queijo, tomate, bacon\",\n\t\"price\": 38.50,\n\t\"owner_id\": \"6518a09c78ce80e956b36a5d\"\n}"
             },
             "parameters": [],
             "headers": [
@@ -303,7 +303,7 @@
                     "value": "application/json"
                 },
                 {
-                    "name": "Owner-Agent",
+                    "name": "User-Agent",
                     "value": "Insomnia/2023.5.7"
                 }
             ],
@@ -321,7 +321,7 @@
         {
             "_id": "req_e857facf2c444a47bf9b9c574061a1d1",
             "parentId": "fld_79d0166fdcdf48e0abdbc007ed1ac175",
-            "modified": 1694715843107,
+            "modified": 1696112703886,
             "created": 1694637393632,
             "url": "{{ _.baseUrl }}/products",
             "name": "Update product",
@@ -329,7 +329,7 @@
             "method": "PUT",
             "body": {
                 "mimeType": "application/json",
-                "text": "{\n\t\"_id\": \"65034fa274d6314cf57d392c\",\n\t\"price\": 250.80\n}"
+                "text": "{\n\t\"_id\": \"65034fa274d6314cf57d392c\",\n\t\"price\": 44.50\n}"
             },
             "parameters": [],
             "headers": [
@@ -338,7 +338,7 @@
                     "value": "application/json"
                 },
                 {
-                    "name": "Owner-Agent",
+                    "name": "User-Agent",
                     "value": "Insomnia/2023.5.7"
                 }
             ],
@@ -356,7 +356,7 @@
         {
             "_id": "req_93e1327466fd43d183d46cd2aa5d48dd",
             "parentId": "fld_79d0166fdcdf48e0abdbc007ed1ac175",
-            "modified": 1694715880345,
+            "modified": 1696112837914,
             "created": 1694713495862,
             "url": "{{ _.baseUrl }}/products",
             "name": " Sync product with category",
@@ -364,7 +364,7 @@
             "method": "PATCH",
             "body": {
                 "mimeType": "application/json",
-                "text": "{\n\t\"_id\": \"65034fa274d6314cf57d392c\",\n\t\"category_id\": \"65034f3874d6314cf57d3921\"\n}"
+                "text": "{\n\t\"_id\": \"6518a0a778ce80e956b36a60\",\n\t\"category_id\": \"6518a0ba78ce80e956b36a66\"\n}"
             },
             "parameters": [],
             "headers": [
@@ -373,7 +373,7 @@
                     "value": "application/json"
                 },
                 {
-                    "name": "Owner-Agent",
+                    "name": "User-Agent",
                     "value": "Insomnia/2023.5.7"
                 }
             ],
@@ -408,7 +408,7 @@
                     "value": "application/json"
                 },
                 {
-                    "name": "Owner-Agent",
+                    "name": "User-Agent",
                     "value": "Insomnia/2023.5.7"
                 }
             ],
@@ -443,7 +443,7 @@
                     "value": "application/json"
                 },
                 {
-                    "name": "Owner-Agent",
+                    "name": "User-Agent",
                     "value": "Insomnia/2023.5.7"
                 }
             ],
@@ -490,7 +490,7 @@
                     "value": "application/json"
                 },
                 {
-                    "name": "Owner-Agent",
+                    "name": "User-Agent",
                     "value": "Insomnia/2023.5.7"
                 }
             ],
@@ -508,7 +508,7 @@
         {
             "_id": "req_b30d4a16e3b743469c4e2dec09140213",
             "parentId": "fld_a66baa2908ab4d458f346bbd3a55d0da",
-            "modified": 1694715703181,
+            "modified": 1696112870734,
             "created": 1694709948971,
             "url": "{{ _.baseUrl }}/categories",
             "name": "Create category",
@@ -516,7 +516,7 @@
             "method": "POST",
             "body": {
                 "mimeType": "application/json",
-                "text": "{\n\t\"title\": \"Frete Gratis\",\n\t\"description\": \"Esse produto conta com frete gratis\",\n\t\"owner_id\": \"65034f0c74d6314cf57d391b\"\n}"
+                "text": "{\n\t\"title\": \"Combo\",\n\t\"description\": \"Combo contém lanche, refrigerante 350ml e batata frita pequena\",\n\t\"owner_id\": \"6518a09c78ce80e956b36a5d\"\n}"
             },
             "parameters": [],
             "headers": [
@@ -525,7 +525,7 @@
                     "value": "application/json"
                 },
                 {
-                    "name": "Owner-Agent",
+                    "name": "User-Agent",
                     "value": "Insomnia/2023.5.7"
                 }
             ],
@@ -560,7 +560,7 @@
                     "value": "application/json"
                 },
                 {
-                    "name": "Owner-Agent",
+                    "name": "User-Agent",
                     "value": "Insomnia/2023.5.7"
                 }
             ],
@@ -595,7 +595,7 @@
                     "value": "application/json"
                 },
                 {
-                    "name": "Owner-Agent",
+                    "name": "User-Agent",
                     "value": "Insomnia/2023.5.7"
                 }
             ],
