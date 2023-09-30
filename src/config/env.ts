@@ -12,6 +12,17 @@ export interface IConfig {
       authMechanism: string;
     };
   };
+  aws: {
+    accessKeyId: string;
+    secretAccessKey: string;
+    defaultRegion: string;
+    defaultOutput: string;
+    s3: {
+      bucket: string;
+      host: string;
+      port: number;
+    };
+  };
   integration: {
     rest: {};
     amqp: {
@@ -41,6 +52,17 @@ export default {
       useUnifiedTopology: true,
       readPreference: "nearest",
       useNewUrlParser: true,
+    },
+  },
+  aws: {
+    accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+    defaultRegion: process.env.AWS_DEFAULT_REGION,
+    defaultOutput: process.env.AWS_DEFAULT_OUTPUT,
+    s3: {
+      bucket: process.env.AWS_S3_BUCKET_NAME,
+      host: process.env.AWS_S3_HOST,
+      port: process.env.AWS_S3_PORT,
     },
   },
   integration: {

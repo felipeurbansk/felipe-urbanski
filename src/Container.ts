@@ -15,6 +15,7 @@ import {
 import CategoryRepository from "@categories/database/mongo/repositories/CategoryRepository";
 import RabbitMQProvider from "infrastructure/amqp/rabbitmq/RabbitMQProvider";
 import SubscriptionService from "utils/SubscriptionService";
+import S3Provider from "infrastructure/aws/s3/S3Provider";
 
 const container = createContainer();
 
@@ -22,8 +23,10 @@ container.register({
   config: asValue(env),
   server: asClass(Server).singleton(),
 
-  // RabbitMQ Provider
+  // Infrastructure
   rabbitMQProvider: asClass(RabbitMQProvider).singleton(),
+
+  s3Provider: asClass(S3Provider).singleton(),
 
   // Register Repositories
   userRepository: asClass(UserRepository).singleton(),
