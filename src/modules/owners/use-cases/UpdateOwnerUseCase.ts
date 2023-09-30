@@ -1,5 +1,5 @@
-import { IOwner } from "modules/owner/interfaces/OwnerInterface";
-import UpdateOwnerService from "modules/owner/services/UpdateOwnerService";
+import { IOwner } from "@owners/interfaces/OwnerInterface";
+import UpdateOwnerService from "@owners/services/UpdateOwnerService";
 
 export default class UpdateOwnerUseCase {
   private updateOwnerService: UpdateOwnerService;

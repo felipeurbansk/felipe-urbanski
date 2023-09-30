@@ -2,8 +2,8 @@ import Server from "Server";
 import env from "./config/env";
 import ProductRepository from "@products/database/mongo/repositories/ProductRepository";
 import ProductSchema from "@products/database/mongo/schemas/ProductSchema";
-import OwnerRepository from "modules/owner/database/mongo/repositories/OwnerRepository";
-import OwnerSchema from "modules/owner/database/mongo/schemas/OwnerSchema";
+import OwnerRepository from "@owners/database/mongo/repositories/OwnerRepository";
+import OwnerSchema from "@owners/database/mongo/schemas/OwnerSchema";
 import CategorySchema from "@categories/database/mongo/schemas/CategorySchema";
 import {
   InjectionMode,

@@ -3,7 +3,7 @@ import {
   ICategory,
 } from "@categories/interfaces/CategoryInterface";
 import CreateCategoryService from "@categories/services/CreateCategoryService";
-import GetOwnerByIdService from "modules/owner/services/GetOwnerByIdService";
+import GetOwnerByIdService from "@owners/services/GetOwnerByIdService";
 
 export default class CreateCategoryUseCase {
   private createCategoryService: CreateCategoryService;

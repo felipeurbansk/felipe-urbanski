@@ -2,8 +2,8 @@ import {
   IFilterOwner,
   IOwner,
   IOwnerId,
-} from "modules/owner/interfaces/OwnerInterface";
-import { IOwnerRepository } from "modules/owner/database/mongo/repositories/IOwnerRepository";
+} from "@owners/interfaces/OwnerInterface";
+import { IOwnerRepository } from "@owners/database/mongo/repositories/IOwnerRepository";
 import OwnerModel from "../models/OwnerModel";
 import ProductModel from "@products/database/mongo/models/ProductModel";
 import CategoryModel from "@categories/database/mongo/models/CategoryModel";

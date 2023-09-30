@@ -1,6 +1,6 @@
-import OwnerRepository from "modules/owner/database/mongo/repositories/OwnerRepository";
-import { IFilterOwner, IOwner } from "modules/owner/interfaces/OwnerInterface";
-import { IOwnerRepository } from "modules/owner/database/mongo/repositories/IOwnerRepository";
+import OwnerRepository from "@owners/database/mongo/repositories/OwnerRepository";
+import { IFilterOwner, IOwner } from "@owners/interfaces/OwnerInterface";
+import { IOwnerRepository } from "@owners/database/mongo/repositories/IOwnerRepository";
 
 export default class GetOwnersService {
   public ownerRepository: IOwnerRepository;

@@ -1,7 +1,7 @@
 import { route, POST } from "awilix-express";
 import { Request } from "express";
 import { Response } from "express-serve-static-core";
-import CreateOwnerUseCase from "modules/owner/use-cases/CreateOwnerUseCase";
+import CreateOwnerUseCase from "@owners/use-cases/CreateOwnerUseCase";
 
 @route("/owners")
 export default class CreateOwnerController {

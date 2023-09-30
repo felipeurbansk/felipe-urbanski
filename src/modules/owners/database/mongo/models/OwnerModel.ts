@@ -1,5 +1,5 @@
 import { Model, Schema } from "mongoose";
-import { IOwner } from "modules/owner/interfaces/OwnerInterface";
+import { IOwner } from "@owners/interfaces/OwnerInterface";
 import MongooseProvider from "infrastructure/database/mongoose/MongooseProvider";
 
 export default class OwnerModel {

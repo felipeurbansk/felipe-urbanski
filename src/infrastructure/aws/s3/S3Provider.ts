@@ -3,7 +3,7 @@ import {
   PutObjectCommand,
   PutObjectCommandOutput,
 } from "@aws-sdk/client-s3";
-import { IOwner } from "modules/owner/interfaces/OwnerInterface";
+import { IOwner } from "@owners/interfaces/OwnerInterface";
 import { IConfig } from "config/env";
 
 export default class S3Provider {

@@ -1,4 +1,4 @@
-import GetAllOwnersService from "modules/owner/services/GetAllOwnersService";
+import GetAllOwnersService from "@owners/services/GetAllOwnersService";
 import { Document } from "mongoose";
 
 export default class GetAllOwnersUseCase {

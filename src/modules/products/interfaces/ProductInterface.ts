@@ -1,5 +1,5 @@
 import { ICategory } from "@categories/interfaces/CategoryInterface";
-import { IOwner } from "modules/owner/interfaces/OwnerInterface";
+import { IOwner } from "@owners/interfaces/OwnerInterface";
 import { Document } from "mongoose";
 
 export interface IProductId {

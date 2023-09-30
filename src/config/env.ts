@@ -2,7 +2,7 @@ export interface IConfig {
   environment: string;
   port: number;
   db: {
-    ownername: string;
+    username: string;
     password: string;
     database: string;
     server: string;
@@ -27,7 +27,7 @@ export interface IConfig {
     rest: {};
     amqp: {
       rabbitMQ: {
-        ownername: string;
+        username: string;
         password: string;
         host: string;
         port: number;
@@ -40,7 +40,7 @@ export default {
   environment: process.env.NODE_ENV,
   port: process.env.PORT || 3000,
   db: {
-    ownername: process.env.MONGODB_USERNAME,
+    username: process.env.MONGODB_USERNAME,
     password: process.env.MONGODB_PASSWORD,
     database: process.env.MONGODB_DATABASE,
     server: process.env.MONGODB_SERVER,
@@ -70,7 +70,7 @@ export default {
     amqp: {
       rabbitMQ: {
         host: process.env.RABBITMQ_HOST,
-        ownername: process.env.RABBITMQ_USERNAME,
+        username: process.env.RABBITMQ_USERNAME,
         password: process.env.RABBITMQ_PASSWORD,
         port: process.env.RABBITMQ_PORT,
       },

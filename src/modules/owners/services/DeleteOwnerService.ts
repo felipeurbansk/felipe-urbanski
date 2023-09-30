@@ -1,6 +1,6 @@
-import OwnerRepository from "modules/owner/database/mongo/repositories/OwnerRepository";
-import { IOwnerId } from "modules/owner/interfaces/OwnerInterface";
-import { IOwnerRepository } from "modules/owner/database/mongo/repositories/IOwnerRepository";
+import OwnerRepository from "@owners/database/mongo/repositories/OwnerRepository";
+import { IOwnerId } from "@owners/interfaces/OwnerInterface";
+import { IOwnerRepository } from "@owners/database/mongo/repositories/IOwnerRepository";
 
 export default class DeleteOwnerService {
   public ownerRepository: IOwnerRepository;

@@ -1,8 +1,8 @@
 import { route, DELETE } from "awilix-express";
 import { Request } from "express";
 import { Response } from "express-serve-static-core";
-import { IOwnerId } from "modules/owner/interfaces/OwnerInterface";
-import DeleteOwnerUseCase from "modules/owner/use-cases/DeleteOwnerUseCase";
+import { IOwnerId } from "@owners/interfaces/OwnerInterface";
+import DeleteOwnerUseCase from "@owners/use-cases/DeleteOwnerUseCase";
 
 @route("/owners")
 export default class DeleteOwnerController {

@@ -14,7 +14,7 @@ export default class RabbitMQProvider {
       try {
         this.connection = await amqp.connect({
           hostname: this.config.integration.amqp.rabbitMQ.host,
-          ownername: this.config.integration.amqp.rabbitMQ.ownername,
+          username: this.config.integration.amqp.rabbitMQ.username,
           password: this.config.integration.amqp.rabbitMQ.password,
           port: this.config.integration.amqp.rabbitMQ.port,
         });

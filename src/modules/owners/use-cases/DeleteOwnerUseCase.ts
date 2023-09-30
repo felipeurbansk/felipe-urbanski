@@ -1,5 +1,5 @@
-import { IOwnerId } from "modules/owner/interfaces/OwnerInterface";
-import DeleteOwnerService from "modules/owner/services/DeleteOwnerService";
+import { IOwnerId } from "@owners/interfaces/OwnerInterface";
+import DeleteOwnerService from "@owners/services/DeleteOwnerService";
 
 export default class DeleteOwnerUseCase {
   private deleteOwnerService: DeleteOwnerService;

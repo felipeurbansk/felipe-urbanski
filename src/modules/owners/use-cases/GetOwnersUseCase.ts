@@ -1,5 +1,5 @@
-import { IFilterOwner, IOwner } from "modules/owner/interfaces/OwnerInterface";
-import GetOwnersService from "modules/owner/services/GetOwnersService";
+import { IFilterOwner, IOwner } from "@owners/interfaces/OwnerInterface";
+import GetOwnersService from "@owners/services/GetOwnersService";
 
 export default class GetOwnersUseCase {
   private getOwnersService: GetOwnersService;

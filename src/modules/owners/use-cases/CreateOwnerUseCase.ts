@@ -1,5 +1,5 @@
-import { ICreateOwner, IOwner } from "modules/owner/interfaces/OwnerInterface";
-import CreateOwnerService from "modules/owner/services/CreateOwnerService";
+import { ICreateOwner, IOwner } from "@owners/interfaces/OwnerInterface";
+import CreateOwnerService from "@owners/services/CreateOwnerService";
 
 export default class CreateOwnerUseCase {
   private createOwnerService: CreateOwnerService;

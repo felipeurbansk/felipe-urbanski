@@ -3,7 +3,7 @@ import {
   IFilterOwner,
   IOwner,
   IOwnerId,
-} from "modules/owner/interfaces/OwnerInterface";
+} from "@owners/interfaces/OwnerInterface";
 
 export interface IOwnerRepository {
   create(data: ICreateOwner): Promise<IOwner>;

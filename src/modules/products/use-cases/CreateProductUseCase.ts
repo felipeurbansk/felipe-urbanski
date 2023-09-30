@@ -5,7 +5,7 @@ import {
   IProduct,
 } from "@products/interfaces/ProductInterface";
 import CreateProductService from "@products/services/CreateProductService";
-import GetOwnerByIdService from "modules/owner/services/GetOwnerByIdService";
+import GetOwnerByIdService from "@owners/services/GetOwnerByIdService";
 import S3Provider from "infrastructure/aws/s3/S3Provider";
 
 export default class CreateProductUseCase {

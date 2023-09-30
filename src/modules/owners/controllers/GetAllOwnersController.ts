@@ -1,7 +1,7 @@
 import { route, GET } from "awilix-express";
 import { Request } from "express";
 import { Response } from "express-serve-static-core";
-import GetAllOwnersUseCase from "modules/owner/use-cases/GetAllOwnersUseCase";
+import GetAllOwnersUseCase from "@owners/use-cases/GetAllOwnersUseCase";
 
 @route("/owners")
 export default class GetAllOwnersController {
