@@ -3,37 +3,37 @@ import {
   ICategory,
 } from "@categories/interfaces/CategoryInterface";
 import CreateCategoryService from "@categories/services/CreateCategoryService";
-import GetUserByIdService from "@users/services/GetUserByIdService";
+import GetOwnerByIdService from "modules/owner/services/GetOwnerByIdService";
 
 export default class CreateCategoryUseCase {
   private createCategoryService: CreateCategoryService;
-  private getUserByIdService: GetUserByIdService;
+  private getOwnerByIdService: GetOwnerByIdService;
 
   constructor({
     createCategoryService,
-    getUserByIdService,
+    getOwnerByIdService,
   }: {
     createCategoryService: CreateCategoryService;
-    getUserByIdService: GetUserByIdService;
+    getOwnerByIdService: GetOwnerByIdService;
   }) {
     this.createCategoryService = createCategoryService;
-    this.getUserByIdService = getUserByIdService;
+    this.getOwnerByIdService = getOwnerByIdService;
   }
 
   public async handle(data: ICreateCategory): Promise<ICategory> {
-    const persistedUser = await this.getUserByIdService.execute({
-      _id: data.user_id,
+    const persistedOwner = await this.getOwnerByIdService.execute({
+      _id: data.owner_id,
     });
 
-    if (!persistedUser) {
-      throw new Error(`User ${data.user_id} does not exist`);
+    if (!persistedOwner) {
+      throw new Error(`Owner ${data.owner_id} does not exist`);
     }
 
     const persistedCategory = await this.createCategoryService.execute(data);
 
-    persistedUser.categories?.push(persistedCategory);
+    persistedOwner.categories?.push(persistedCategory);
 
-    await persistedUser.save();
+    await persistedOwner.save();
 
     return persistedCategory;
   }

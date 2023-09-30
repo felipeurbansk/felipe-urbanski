@@ -1,5 +1,5 @@
 import { ICategory } from "@categories/interfaces/CategoryInterface";
-import { IUser } from "@users/interfaces/UserInterface";
+import { IOwner } from "modules/owner/interfaces/OwnerInterface";
 import { Document } from "mongoose";
 
 export interface IProductId {
@@ -11,7 +11,7 @@ export interface IProduct extends Document {
   title: string;
   description: string;
   price: number;
-  user: IUser;
+  owner: IOwner;
   categories: [ICategory];
 }
 
@@ -19,7 +19,7 @@ export interface ICreateProduct {
   title: string;
   description: string;
   price: number;
-  user_id: string;
+  owner_id: string;
   category_id?: string;
   categories?: [ICategory];
 }

@@ -113,13 +113,13 @@
     "@aws-sdk/middleware-sdk-s3" "3.418.0"
     "@aws-sdk/middleware-signing" "3.418.0"
     "@aws-sdk/middleware-ssec" "3.418.0"
-    "@aws-sdk/middleware-user-agent" "3.418.0"
+    "@aws-sdk/middleware-owner-agent" "3.418.0"
     "@aws-sdk/region-config-resolver" "3.418.0"
     "@aws-sdk/signature-v4-multi-region" "3.418.0"
     "@aws-sdk/types" "3.418.0"
     "@aws-sdk/util-endpoints" "3.418.0"
-    "@aws-sdk/util-user-agent-browser" "3.418.0"
-    "@aws-sdk/util-user-agent-node" "3.418.0"
+    "@aws-sdk/util-owner-agent-browser" "3.418.0"
+    "@aws-sdk/util-owner-agent-node" "3.418.0"
     "@aws-sdk/xml-builder" "3.310.0"
     "@smithy/config-resolver" "^2.0.10"
     "@smithy/eventstream-serde-browser" "^2.0.9"
@@ -164,12 +164,12 @@
     "@aws-sdk/middleware-host-header" "3.418.0"
     "@aws-sdk/middleware-logger" "3.418.0"
     "@aws-sdk/middleware-recursion-detection" "3.418.0"
-    "@aws-sdk/middleware-user-agent" "3.418.0"
+    "@aws-sdk/middleware-owner-agent" "3.418.0"
     "@aws-sdk/region-config-resolver" "3.418.0"
     "@aws-sdk/types" "3.418.0"
     "@aws-sdk/util-endpoints" "3.418.0"
-    "@aws-sdk/util-user-agent-browser" "3.418.0"
-    "@aws-sdk/util-user-agent-node" "3.418.0"
+    "@aws-sdk/util-owner-agent-browser" "3.418.0"
+    "@aws-sdk/util-owner-agent-node" "3.418.0"
     "@smithy/config-resolver" "^2.0.10"
     "@smithy/fetch-http-handler" "^2.1.5"
     "@smithy/hash-node" "^2.0.9"
@@ -207,12 +207,12 @@
     "@aws-sdk/middleware-recursion-detection" "3.418.0"
     "@aws-sdk/middleware-sdk-sts" "3.418.0"
     "@aws-sdk/middleware-signing" "3.418.0"
-    "@aws-sdk/middleware-user-agent" "3.418.0"
+    "@aws-sdk/middleware-owner-agent" "3.418.0"
     "@aws-sdk/region-config-resolver" "3.418.0"
     "@aws-sdk/types" "3.418.0"
     "@aws-sdk/util-endpoints" "3.418.0"
-    "@aws-sdk/util-user-agent-browser" "3.418.0"
-    "@aws-sdk/util-user-agent-node" "3.418.0"
+    "@aws-sdk/util-owner-agent-browser" "3.418.0"
+    "@aws-sdk/util-owner-agent-node" "3.418.0"
     "@smithy/config-resolver" "^2.0.10"
     "@smithy/fetch-http-handler" "^2.1.5"
     "@smithy/hash-node" "^2.0.9"
@@ -434,9 +434,9 @@
     "@smithy/types" "^2.3.3"
     tslib "^2.5.0"
 
-"@aws-sdk/middleware-user-agent@3.418.0":
+"@aws-sdk/middleware-owner-agent@3.418.0":
   version "3.418.0"
-  resolved "https://registry.yarnpkg.com/@aws-sdk/middleware-user-agent/-/middleware-user-agent-3.418.0.tgz#37426cf801332165fb170b1fd62dea8bb967a1ef"
+  resolved "https://registry.yarnpkg.com/@aws-sdk/middleware-owner-agent/-/middleware-owner-agent-3.418.0.tgz#37426cf801332165fb170b1fd62dea8bb967a1ef"
   integrity sha512-Jdcztg9Tal9SEAL0dKRrnpKrm6LFlWmAhvuwv0dQ7bNTJxIxyEFbpqdgy7mpQHsLVZgq1Aad/7gT/72c9igyZw==
   dependencies:
     "@aws-sdk/types" "3.418.0"
@@ -477,11 +477,11 @@
     "@aws-sdk/middleware-host-header" "3.418.0"
     "@aws-sdk/middleware-logger" "3.418.0"
     "@aws-sdk/middleware-recursion-detection" "3.418.0"
-    "@aws-sdk/middleware-user-agent" "3.418.0"
+    "@aws-sdk/middleware-owner-agent" "3.418.0"
     "@aws-sdk/types" "3.418.0"
     "@aws-sdk/util-endpoints" "3.418.0"
-    "@aws-sdk/util-user-agent-browser" "3.418.0"
-    "@aws-sdk/util-user-agent-node" "3.418.0"
+    "@aws-sdk/util-owner-agent-browser" "3.418.0"
+    "@aws-sdk/util-owner-agent-node" "3.418.0"
     "@smithy/config-resolver" "^2.0.10"
     "@smithy/fetch-http-handler" "^2.1.5"
     "@smithy/hash-node" "^2.0.9"
@@ -538,9 +538,9 @@
   dependencies:
     tslib "^2.5.0"
 
-"@aws-sdk/util-user-agent-browser@3.418.0":
+"@aws-sdk/util-owner-agent-browser@3.418.0":
   version "3.418.0"
-  resolved "https://registry.yarnpkg.com/@aws-sdk/util-user-agent-browser/-/util-user-agent-browser-3.418.0.tgz#dc76b8e7e5cae3f827d68cd4a3ee30c0d475a39c"
+  resolved "https://registry.yarnpkg.com/@aws-sdk/util-owner-agent-browser/-/util-owner-agent-browser-3.418.0.tgz#dc76b8e7e5cae3f827d68cd4a3ee30c0d475a39c"
   integrity sha512-c4p4mc0VV/jIeNH0lsXzhJ1MpWRLuboGtNEpqE4s1Vl9ck2amv9VdUUZUmHbg+bVxlMgRQ4nmiovA4qIrqGuyg==
   dependencies:
     "@aws-sdk/types" "3.418.0"
@@ -548,9 +548,9 @@
     bowser "^2.11.0"
     tslib "^2.5.0"
 
-"@aws-sdk/util-user-agent-node@3.418.0":
+"@aws-sdk/util-owner-agent-node@3.418.0":
   version "3.418.0"
-  resolved "https://registry.yarnpkg.com/@aws-sdk/util-user-agent-node/-/util-user-agent-node-3.418.0.tgz#7d5a1c82ce3265ff0f70b13d58d08593113ab99a"
+  resolved "https://registry.yarnpkg.com/@aws-sdk/util-owner-agent-node/-/util-owner-agent-node-3.418.0.tgz#7d5a1c82ce3265ff0f70b13d58d08593113ab99a"
   integrity sha512-BXMskXFtg+dmzSCgmnWOffokxIbPr1lFqa1D9kvM3l3IFRiFGx2IyDg+8MAhq11aPDLvoa/BDuQ0Yqma5izOhg==
   dependencies:
     "@aws-sdk/types" "3.418.0"

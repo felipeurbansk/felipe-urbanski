@@ -1,1 +1,642 @@
-{"_type":"export","__export_format":4,"__export_date":"2023-09-14T18:40:25.839Z","__export_source":"insomnia.desktop.app:v2023.5.8","resources":[{"_id":"req_ab50d61f7afe44639c9fae8e1be8ea29","parentId":"fld_d53bfa46d3c34aa19b95081b29869654","modified":1694715620027,"created":1694044764093,"url":"{{ _.baseUrl }}/users/65034ed874d6314cf57d3910","name":"Get users","description":"","method":"GET","body":{"mimeType":"application/json","text":""},"parameters":[],"headers":[{"name":"Content-Type","value":"application/json"},{"name":"User-Agent","value":"Insomnia/2023.5.7"}],"authentication":{},"metaSortKey":-1694044764093,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"fld_d53bfa46d3c34aa19b95081b29869654","parentId":"wrk_2736603679d14daf9784f861bcb7513e","modified":1694044762284,"created":1694044762284,"name":"users","description":"","environment":{},"environmentPropertyOrder":null,"metaSortKey":-1694044762284,"_type":"request_group"},{"_id":"wrk_2736603679d14daf9784f861bcb7513e","parentId":null,"modified":1694044727739,"created":1694044727739,"name":"Anota.ai test","description":"","scope":"collection","_type":"workspace"},{"_id":"req_e5cfdc45e922481ca9a9568a7163ae76","parentId":"fld_d53bfa46d3c34aa19b95081b29869654","modified":1694699050839,"created":1694699046133,"url":"{{ _.baseUrl }}/users/all","name":"Get all users","description":"","method":"GET","body":{"mimeType":"application/json","text":""},"parameters":[],"headers":[{"name":"Content-Type","value":"application/json"},{"name":"User-Agent","value":"Insomnia/2023.5.7"}],"authentication":{},"metaSortKey":-1693633635783,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_b6ef5918303845949190003086f2e073","parentId":"fld_d53bfa46d3c34aa19b95081b29869654","modified":1694715527173,"created":1694561734405,"url":"{{ _.baseUrl }}/users","name":"Create user","description":"","method":"POST","body":{"mimeType":"application/json","text":"{\n\t\"name\": \"Felipe Urbanski\",\n\t\"email\": \"felipeurbansk@gmail.com\"\n}"},"parameters":[],"headers":[{"name":"Content-Type","value":"application/json"},{"name":"User-Agent","value":"Insomnia/2023.5.7"}],"authentication":{},"metaSortKey":-1692400250853,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_1fd07a382f964f2ea3c9820b7568a373","parentId":"fld_d53bfa46d3c34aa19b95081b29869654","modified":1694715634851,"created":1694573161199,"url":"{{ _.baseUrl }}/users","name":"Update user","description":"","method":"PUT","body":{"mimeType":"application/json","text":"{\n\t\"_id\": \"65034ed874d6314cf57d3910\",\n\t\"name\": \"Felipe Urbanskii\"\n}"},"parameters":[],"headers":[{"name":"Content-Type","value":"application/json"},{"name":"User-Agent","value":"Insomnia/2023.5.7"}],"authentication":{},"metaSortKey":-1691577994233,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_11ee93d7a7144feaaa77cdf9b27b587e","parentId":"fld_d53bfa46d3c34aa19b95081b29869654","modified":1694715648101,"created":1694576262716,"url":"{{ _.baseUrl }}/users","name":"Delete user","description":"","method":"DELETE","body":{"mimeType":"application/json","text":"{\n\t\"_id\": \"65034ed874d6314cf57d3910\"\n}"},"parameters":[],"headers":[{"name":"Content-Type","value":"application/json"},{"name":"User-Agent","value":"Insomnia/2023.5.7"}],"authentication":{},"metaSortKey":-1691166865923,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_e31d6fb5ada34f988e5a5b6fb46a559a","parentId":"fld_79d0166fdcdf48e0abdbc007ed1ac175","modified":1694715860638,"created":1694637393617,"url":"{{ _.baseUrl }}/products/65034fa274d6314cf57d392c","name":"Get products","description":"","method":"GET","body":{"mimeType":"application/json","text":""},"parameters":[],"headers":[{"name":"Content-Type","value":"application/json"},{"name":"User-Agent","value":"Insomnia/2023.5.7"}],"authentication":{},"metaSortKey":-1694044764093,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"fld_79d0166fdcdf48e0abdbc007ed1ac175","parentId":"wrk_2736603679d14daf9784f861bcb7513e","modified":1694637393614,"created":1694637393614,"name":"products","description":"","environment":{},"environmentPropertyOrder":null,"metaSortKey":-1692400242808,"_type":"request_group"},{"_id":"req_3076b2b0b5a64014937c3ad9ad055e19","parentId":"fld_79d0166fdcdf48e0abdbc007ed1ac175","modified":1694645591926,"created":1694645390013,"url":"{{ _.baseUrl }}/products/all","name":"Get all products","description":"","method":"GET","body":{"mimeType":"application/json","text":""},"parameters":[],"headers":[{"name":"Content-Type","value":"application/json"},{"name":"User-Agent","value":"Insomnia/2023.5.7"}],"authentication":{},"metaSortKey":-1693222507473,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_438759992fdd45868774960d84fa1722","parentId":"fld_79d0166fdcdf48e0abdbc007ed1ac175","modified":1694715806078,"created":1694637393622,"url":"{{ _.baseUrl }}/products","name":"Create product","description":"","method":"POST","body":{"mimeType":"application/json","text":"{\n\t\"title\": \"Roteador Wi-Fi\",\n\t\"description\": \"Roteador para acelerar a sua internet\",\n\t\"price\": 299.20,\n\t\"user_id\": \"65034f0c74d6314cf57d391b\"\n}"},"parameters":[],"headers":[{"name":"Content-Type","value":"application/json"},{"name":"User-Agent","value":"Insomnia/2023.5.7"}],"authentication":{},"metaSortKey":-1692400250853,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_e857facf2c444a47bf9b9c574061a1d1","parentId":"fld_79d0166fdcdf48e0abdbc007ed1ac175","modified":1694715843107,"created":1694637393632,"url":"{{ _.baseUrl }}/products","name":"Update product","description":"","method":"PUT","body":{"mimeType":"application/json","text":"{\n\t\"_id\": \"65034fa274d6314cf57d392c\",\n\t\"price\": 250.80\n}"},"parameters":[],"headers":[{"name":"Content-Type","value":"application/json"},{"name":"User-Agent","value":"Insomnia/2023.5.7"}],"authentication":{},"metaSortKey":-1691577994233,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_93e1327466fd43d183d46cd2aa5d48dd","parentId":"fld_79d0166fdcdf48e0abdbc007ed1ac175","modified":1694715880345,"created":1694713495862,"url":"{{ _.baseUrl }}/products","name":" Sync product with category","description":"","method":"PATCH","body":{"mimeType":"application/json","text":"{\n\t\"_id\": \"65034fa274d6314cf57d392c\",\n\t\"category_id\": \"65034f3874d6314cf57d3921\"\n}"},"parameters":[],"headers":[{"name":"Content-Type","value":"application/json"},{"name":"User-Agent","value":"Insomnia/2023.5.7"}],"authentication":{},"metaSortKey":-1691372430078,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_ae666cae95da4cebab886197ea57c113","parentId":"fld_79d0166fdcdf48e0abdbc007ed1ac175","modified":1694637461644,"created":1694637393637,"url":"{{ _.baseUrl }}/products","name":"Delete product","description":"","method":"DELETE","body":{"mimeType":"application/json","text":"{\n\t\"_id\": \"6500faaf4eedcde01e874834\"\n}"},"parameters":[],"headers":[{"name":"Content-Type","value":"application/json"},{"name":"User-Agent","value":"Insomnia/2023.5.7"}],"authentication":{},"metaSortKey":-1691166865923,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_ba4a387dc87740a4b66a0d4d0707a121","parentId":"fld_a66baa2908ab4d458f346bbd3a55d0da","modified":1694715710444,"created":1694709948966,"url":"{{ _.baseUrl }}/categories/65034f3874d6314cf57d3921","name":"Get categories","description":"","method":"GET","body":{"mimeType":"application/json","text":""},"parameters":[],"headers":[{"name":"Content-Type","value":"application/json"},{"name":"User-Agent","value":"Insomnia/2023.5.7"}],"authentication":{},"metaSortKey":-1694044764093,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"fld_a66baa2908ab4d458f346bbd3a55d0da","parentId":"wrk_2736603679d14daf9784f861bcb7513e","modified":1694709948964,"created":1694709948964,"name":"categories","description":"","environment":{},"environmentPropertyOrder":null,"metaSortKey":-1691577983070,"_type":"request_group"},{"_id":"req_dc2f83a004ba4302a89216fc2e87a19c","parentId":"fld_a66baa2908ab4d458f346bbd3a55d0da","modified":1694709996344,"created":1694709948985,"url":"{{ _.baseUrl }}/categories/all","name":"Get all categories","description":"","method":"GET","body":{"mimeType":"application/json","text":""},"parameters":[],"headers":[{"name":"Content-Type","value":"application/json"},{"name":"User-Agent","value":"Insomnia/2023.5.7"}],"authentication":{},"metaSortKey":-1693222507473,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_b30d4a16e3b743469c4e2dec09140213","parentId":"fld_a66baa2908ab4d458f346bbd3a55d0da","modified":1694715703181,"created":1694709948971,"url":"{{ _.baseUrl }}/categories","name":"Create category","description":"","method":"POST","body":{"mimeType":"application/json","text":"{\n\t\"title\": \"Frete Gratis\",\n\t\"description\": \"Esse produto conta com frete gratis\",\n\t\"user_id\": \"65034f0c74d6314cf57d391b\"\n}"},"parameters":[],"headers":[{"name":"Content-Type","value":"application/json"},{"name":"User-Agent","value":"Insomnia/2023.5.7"}],"authentication":{},"metaSortKey":-1692400250853,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_7d48e59ce80b47aab9f6531c50cd70d9","parentId":"fld_a66baa2908ab4d458f346bbd3a55d0da","modified":1694715761778,"created":1694709948975,"url":"{{ _.baseUrl }}/categories","name":"Update category","description":"","method":"PUT","body":{"mimeType":"application/json","text":"{\n\t\"_id\": \"65034f3874d6314cf57d3921\",\n\t\"title\": \"Frete Gratis 3 dias uteis\"\n}"},"parameters":[],"headers":[{"name":"Content-Type","value":"application/json"},{"name":"User-Agent","value":"Insomnia/2023.5.7"}],"authentication":{},"metaSortKey":-1691577994233,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"req_93c76818967a4acea4d2cd329b5a2918","parentId":"fld_a66baa2908ab4d458f346bbd3a55d0da","modified":1694710001390,"created":1694709948980,"url":"{{ _.baseUrl }}/categories","name":"Delete category","description":"","method":"DELETE","body":{"mimeType":"application/json","text":"{\n\t\"_id\": \"6500faaf4eedcde01e874834\"\n}"},"parameters":[],"headers":[{"name":"Content-Type","value":"application/json"},{"name":"User-Agent","value":"Insomnia/2023.5.7"}],"authentication":{},"metaSortKey":-1691166865923,"isPrivate":false,"settingStoreCookies":true,"settingSendCookies":true,"settingDisableRenderRequestBody":false,"settingEncodeUrl":true,"settingRebuildPath":true,"settingFollowRedirects":"global","_type":"request"},{"_id":"env_706fe273d8719ff5d6c0a4afb99fc981b3d0e19a","parentId":"wrk_2736603679d14daf9784f861bcb7513e","modified":1694148348479,"created":1694044727743,"name":"Base Environment","data":{"baseUrl":"http://localhost:3000"},"dataPropertyOrder":{"&":["baseUrl"]},"color":null,"isPrivate":false,"metaSortKey":1694044727743,"_type":"environment"},{"_id":"jar_706fe273d8719ff5d6c0a4afb99fc981b3d0e19a","parentId":"wrk_2736603679d14daf9784f861bcb7513e","modified":1694044727746,"created":1694044727746,"name":"Default Jar","cookies":[],"_type":"cookie_jar"}]}
+{
+    "_type": "export",
+    "__export_format": 4,
+    "__export_date": "2023-09-14T18:40:25.839Z",
+    "__export_source": "insomnia.desktop.app:v2023.5.8",
+    "resources": [
+        {
+            "_id": "req_ab50d61f7afe44639c9fae8e1be8ea29",
+            "parentId": "fld_d53bfa46d3c34aa19b95081b29869654",
+            "modified": 1694715620027,
+            "created": 1694044764093,
+            "url": "{{ _.baseUrl }}/owners/65034ed874d6314cf57d3910",
+            "name": "Get owners",
+            "description": "",
+            "method": "GET",
+            "body": {
+                "mimeType": "application/json",
+                "text": ""
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Owner-Agent",
+                    "value": "Insomnia/2023.5.7"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1694044764093,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "fld_d53bfa46d3c34aa19b95081b29869654",
+            "parentId": "wrk_2736603679d14daf9784f861bcb7513e",
+            "modified": 1694044762284,
+            "created": 1694044762284,
+            "name": "owners",
+            "description": "",
+            "environment": {},
+            "environmentPropertyOrder": null,
+            "metaSortKey": -1694044762284,
+            "_type": "request_group"
+        },
+        {
+            "_id": "wrk_2736603679d14daf9784f861bcb7513e",
+            "parentId": null,
+            "modified": 1694044727739,
+            "created": 1694044727739,
+            "name": "Anota.ai test",
+            "description": "",
+            "scope": "collection",
+            "_type": "workspace"
+        },
+        {
+            "_id": "req_e5cfdc45e922481ca9a9568a7163ae76",
+            "parentId": "fld_d53bfa46d3c34aa19b95081b29869654",
+            "modified": 1694699050839,
+            "created": 1694699046133,
+            "url": "{{ _.baseUrl }}/owners/all",
+            "name": "Get all owners",
+            "description": "",
+            "method": "GET",
+            "body": {
+                "mimeType": "application/json",
+                "text": ""
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Owner-Agent",
+                    "value": "Insomnia/2023.5.7"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1693633635783,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_b6ef5918303845949190003086f2e073",
+            "parentId": "fld_d53bfa46d3c34aa19b95081b29869654",
+            "modified": 1694715527173,
+            "created": 1694561734405,
+            "url": "{{ _.baseUrl }}/owners",
+            "name": "Create owner",
+            "description": "",
+            "method": "POST",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"name\": \"Felipe Urbanski\",\n\t\"email\": \"felipeurbansk@gmail.com\"\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Owner-Agent",
+                    "value": "Insomnia/2023.5.7"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1692400250853,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_1fd07a382f964f2ea3c9820b7568a373",
+            "parentId": "fld_d53bfa46d3c34aa19b95081b29869654",
+            "modified": 1694715634851,
+            "created": 1694573161199,
+            "url": "{{ _.baseUrl }}/owners",
+            "name": "Update owner",
+            "description": "",
+            "method": "PUT",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"_id\": \"65034ed874d6314cf57d3910\",\n\t\"name\": \"Felipe Urbanskii\"\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Owner-Agent",
+                    "value": "Insomnia/2023.5.7"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1691577994233,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_11ee93d7a7144feaaa77cdf9b27b587e",
+            "parentId": "fld_d53bfa46d3c34aa19b95081b29869654",
+            "modified": 1694715648101,
+            "created": 1694576262716,
+            "url": "{{ _.baseUrl }}/owners",
+            "name": "Delete owner",
+            "description": "",
+            "method": "DELETE",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"_id\": \"65034ed874d6314cf57d3910\"\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Owner-Agent",
+                    "value": "Insomnia/2023.5.7"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1691166865923,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_e31d6fb5ada34f988e5a5b6fb46a559a",
+            "parentId": "fld_79d0166fdcdf48e0abdbc007ed1ac175",
+            "modified": 1694715860638,
+            "created": 1694637393617,
+            "url": "{{ _.baseUrl }}/products/65034fa274d6314cf57d392c",
+            "name": "Get products",
+            "description": "",
+            "method": "GET",
+            "body": {
+                "mimeType": "application/json",
+                "text": ""
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Owner-Agent",
+                    "value": "Insomnia/2023.5.7"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1694044764093,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "fld_79d0166fdcdf48e0abdbc007ed1ac175",
+            "parentId": "wrk_2736603679d14daf9784f861bcb7513e",
+            "modified": 1694637393614,
+            "created": 1694637393614,
+            "name": "products",
+            "description": "",
+            "environment": {},
+            "environmentPropertyOrder": null,
+            "metaSortKey": -1692400242808,
+            "_type": "request_group"
+        },
+        {
+            "_id": "req_3076b2b0b5a64014937c3ad9ad055e19",
+            "parentId": "fld_79d0166fdcdf48e0abdbc007ed1ac175",
+            "modified": 1694645591926,
+            "created": 1694645390013,
+            "url": "{{ _.baseUrl }}/products/all",
+            "name": "Get all products",
+            "description": "",
+            "method": "GET",
+            "body": {
+                "mimeType": "application/json",
+                "text": ""
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Owner-Agent",
+                    "value": "Insomnia/2023.5.7"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1693222507473,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_438759992fdd45868774960d84fa1722",
+            "parentId": "fld_79d0166fdcdf48e0abdbc007ed1ac175",
+            "modified": 1694715806078,
+            "created": 1694637393622,
+            "url": "{{ _.baseUrl }}/products",
+            "name": "Create product",
+            "description": "",
+            "method": "POST",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"title\": \"Roteador Wi-Fi\",\n\t\"description\": \"Roteador para acelerar a sua internet\",\n\t\"price\": 299.20,\n\t\"owner_id\": \"65034f0c74d6314cf57d391b\"\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Owner-Agent",
+                    "value": "Insomnia/2023.5.7"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1692400250853,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_e857facf2c444a47bf9b9c574061a1d1",
+            "parentId": "fld_79d0166fdcdf48e0abdbc007ed1ac175",
+            "modified": 1694715843107,
+            "created": 1694637393632,
+            "url": "{{ _.baseUrl }}/products",
+            "name": "Update product",
+            "description": "",
+            "method": "PUT",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"_id\": \"65034fa274d6314cf57d392c\",\n\t\"price\": 250.80\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Owner-Agent",
+                    "value": "Insomnia/2023.5.7"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1691577994233,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_93e1327466fd43d183d46cd2aa5d48dd",
+            "parentId": "fld_79d0166fdcdf48e0abdbc007ed1ac175",
+            "modified": 1694715880345,
+            "created": 1694713495862,
+            "url": "{{ _.baseUrl }}/products",
+            "name": " Sync product with category",
+            "description": "",
+            "method": "PATCH",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"_id\": \"65034fa274d6314cf57d392c\",\n\t\"category_id\": \"65034f3874d6314cf57d3921\"\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Owner-Agent",
+                    "value": "Insomnia/2023.5.7"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1691372430078,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_ae666cae95da4cebab886197ea57c113",
+            "parentId": "fld_79d0166fdcdf48e0abdbc007ed1ac175",
+            "modified": 1694637461644,
+            "created": 1694637393637,
+            "url": "{{ _.baseUrl }}/products",
+            "name": "Delete product",
+            "description": "",
+            "method": "DELETE",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"_id\": \"6500faaf4eedcde01e874834\"\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Owner-Agent",
+                    "value": "Insomnia/2023.5.7"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1691166865923,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_ba4a387dc87740a4b66a0d4d0707a121",
+            "parentId": "fld_a66baa2908ab4d458f346bbd3a55d0da",
+            "modified": 1694715710444,
+            "created": 1694709948966,
+            "url": "{{ _.baseUrl }}/categories/65034f3874d6314cf57d3921",
+            "name": "Get categories",
+            "description": "",
+            "method": "GET",
+            "body": {
+                "mimeType": "application/json",
+                "text": ""
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Owner-Agent",
+                    "value": "Insomnia/2023.5.7"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1694044764093,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "fld_a66baa2908ab4d458f346bbd3a55d0da",
+            "parentId": "wrk_2736603679d14daf9784f861bcb7513e",
+            "modified": 1694709948964,
+            "created": 1694709948964,
+            "name": "categories",
+            "description": "",
+            "environment": {},
+            "environmentPropertyOrder": null,
+            "metaSortKey": -1691577983070,
+            "_type": "request_group"
+        },
+        {
+            "_id": "req_dc2f83a004ba4302a89216fc2e87a19c",
+            "parentId": "fld_a66baa2908ab4d458f346bbd3a55d0da",
+            "modified": 1694709996344,
+            "created": 1694709948985,
+            "url": "{{ _.baseUrl }}/categories/all",
+            "name": "Get all categories",
+            "description": "",
+            "method": "GET",
+            "body": {
+                "mimeType": "application/json",
+                "text": ""
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Owner-Agent",
+                    "value": "Insomnia/2023.5.7"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1693222507473,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_b30d4a16e3b743469c4e2dec09140213",
+            "parentId": "fld_a66baa2908ab4d458f346bbd3a55d0da",
+            "modified": 1694715703181,
+            "created": 1694709948971,
+            "url": "{{ _.baseUrl }}/categories",
+            "name": "Create category",
+            "description": "",
+            "method": "POST",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"title\": \"Frete Gratis\",\n\t\"description\": \"Esse produto conta com frete gratis\",\n\t\"owner_id\": \"65034f0c74d6314cf57d391b\"\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Owner-Agent",
+                    "value": "Insomnia/2023.5.7"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1692400250853,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_7d48e59ce80b47aab9f6531c50cd70d9",
+            "parentId": "fld_a66baa2908ab4d458f346bbd3a55d0da",
+            "modified": 1694715761778,
+            "created": 1694709948975,
+            "url": "{{ _.baseUrl }}/categories",
+            "name": "Update category",
+            "description": "",
+            "method": "PUT",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"_id\": \"65034f3874d6314cf57d3921\",\n\t\"title\": \"Frete Gratis 3 dias uteis\"\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Owner-Agent",
+                    "value": "Insomnia/2023.5.7"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1691577994233,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_93c76818967a4acea4d2cd329b5a2918",
+            "parentId": "fld_a66baa2908ab4d458f346bbd3a55d0da",
+            "modified": 1694710001390,
+            "created": 1694709948980,
+            "url": "{{ _.baseUrl }}/categories",
+            "name": "Delete category",
+            "description": "",
+            "method": "DELETE",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"_id\": \"6500faaf4eedcde01e874834\"\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Owner-Agent",
+                    "value": "Insomnia/2023.5.7"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1691166865923,
+            "isPrivate": false,
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "env_706fe273d8719ff5d6c0a4afb99fc981b3d0e19a",
+            "parentId": "wrk_2736603679d14daf9784f861bcb7513e",
+            "modified": 1694148348479,
+            "created": 1694044727743,
+            "name": "Base Environment",
+            "data": {
+                "baseUrl": "http://localhost:3000"
+            },
+            "dataPropertyOrder": {
+                "&": [
+                    "baseUrl"
+                ]
+            },
+            "color": null,
+            "isPrivate": false,
+            "metaSortKey": 1694044727743,
+            "_type": "environment"
+        },
+        {
+            "_id": "jar_706fe273d8719ff5d6c0a4afb99fc981b3d0e19a",
+            "parentId": "wrk_2736603679d14daf9784f861bcb7513e",
+            "modified": 1694044727746,
+            "created": 1694044727746,
+            "name": "Default Jar",
+            "cookies": [],
+            "_type": "cookie_jar"
+        }
+    ]
+}

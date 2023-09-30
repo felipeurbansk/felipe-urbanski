@@ -5,31 +5,31 @@ import {
   IProduct,
 } from "@products/interfaces/ProductInterface";
 import CreateProductService from "@products/services/CreateProductService";
-import GetUserByIdService from "@users/services/GetUserByIdService";
+import GetOwnerByIdService from "modules/owner/services/GetOwnerByIdService";
 import S3Provider from "infrastructure/aws/s3/S3Provider";
 
 export default class CreateProductUseCase {
   private createProductService: CreateProductService;
-  private getUserByIdService: GetUserByIdService;
+  private getOwnerByIdService: GetOwnerByIdService;
   private getCategoryByIdService: GetCategoryByIdService;
   private productCreatedPublisher: ProductCreatedPublisher;
   private s3Provider: S3Provider;
 
   constructor({
     createProductService,
-    getUserByIdService,
+    getOwnerByIdService,
     getCategoryByIdService,
     productCreatedPublisher,
     s3Provider,
   }: {
     createProductService: CreateProductService;
-    getUserByIdService: GetUserByIdService;
+    getOwnerByIdService: GetOwnerByIdService;
     getCategoryByIdService: GetCategoryByIdService;
     productCreatedPublisher: ProductCreatedPublisher;
     s3Provider: S3Provider;
   }) {
     this.createProductService = createProductService;
-    this.getUserByIdService = getUserByIdService;
+    this.getOwnerByIdService = getOwnerByIdService;
     this.getCategoryByIdService = getCategoryByIdService;
     this.productCreatedPublisher = productCreatedPublisher;
     this.s3Provider = s3Provider;
@@ -38,12 +38,12 @@ export default class CreateProductUseCase {
   public async handle(data: ICreateProduct): Promise<IProduct> {
     let persistedCategory;
 
-    const persistedUser = await this.getUserByIdService.execute({
-      _id: data.user_id,
+    const persistedOwner = await this.getOwnerByIdService.execute({
+      _id: data.owner_id,
     });
 
-    if (!persistedUser) {
-      throw new Error(`User ${data.user_id} does not exist`);
+    if (!persistedOwner) {
+      throw new Error(`Owner ${data.owner_id} does not exist`);
     }
 
     if (typeof data.category_id !== "undefined" && data.category_id !== "") {
@@ -63,14 +63,14 @@ export default class CreateProductUseCase {
       await persistedProduct.save();
     }
 
-    persistedUser.products?.push(persistedProduct);
+    persistedOwner.products?.push(persistedProduct);
 
-    await persistedUser.save();
+    await persistedOwner.save();
 
     await this.s3Provider.uploadFile(
       "anotai-bucket",
-      `catalog_${persistedUser._id}.json`,
-      persistedUser
+      `catalog_${persistedOwner._id}.json`,
+      persistedOwner
     );
 
     await this.productCreatedPublisher.publish(persistedProduct);

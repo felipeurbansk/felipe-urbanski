@@ -3,7 +3,7 @@ import {
   PutObjectCommand,
   PutObjectCommandOutput,
 } from "@aws-sdk/client-s3";
-import { IUser } from "@users/interfaces/UserInterface";
+import { IOwner } from "modules/owner/interfaces/OwnerInterface";
 import { IConfig } from "config/env";
 
 export default class S3Provider {
@@ -28,7 +28,7 @@ export default class S3Provider {
   async uploadFile(
     bucketName: string,
     fileName: string,
-    content: IUser
+    content: IOwner
   ): Promise<PutObjectCommandOutput | null> {
     if (!this.s3) {
       throw new Error("Connection S3 not established");

@@ -18,7 +18,7 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "paths": {
-      "@users/*": ["modules/users/*"],
+      "@owners/*": ["modules/owners/*"],
       "@products/*": ["modules/products/*"],
       "@categories/*": ["modules/categories/*"]
     }

@@ -2,8 +2,8 @@ import Server from "Server";
 import env from "./config/env";
 import ProductRepository from "@products/database/mongo/repositories/ProductRepository";
 import ProductSchema from "@products/database/mongo/schemas/ProductSchema";
-import UserRepository from "@users/database/mongo/repositories/UserRepository";
-import UserSchema from "@users/database/mongo/schemas/UserSchema";
+import OwnerRepository from "modules/owner/database/mongo/repositories/OwnerRepository";
+import OwnerSchema from "modules/owner/database/mongo/schemas/OwnerSchema";
 import CategorySchema from "@categories/database/mongo/schemas/CategorySchema";
 import {
   InjectionMode,
@@ -29,7 +29,7 @@ container.register({
   s3Provider: asClass(S3Provider).singleton(),
 
   // Register Repositories
-  userRepository: asClass(UserRepository).singleton(),
+  ownerRepository: asClass(OwnerRepository).singleton(),
   productRepository: asClass(ProductRepository).singleton(),
   categoryRepository: asClass(CategoryRepository).singleton(),
 
@@ -37,14 +37,14 @@ container.register({
   subscriptionService: asClass(SubscriptionService),
 
   // Schemas
-  userSchema: asValue(UserSchema),
+  ownerSchema: asValue(OwnerSchema),
   productSchema: asValue(ProductSchema),
   categorySchema: asValue(CategorySchema),
 });
 
 container.loadModules(
   [
-    "src/modules/users/**/*.ts",
+    "src/modules/owners/**/*.ts",
     "src/modules/products/**/*.ts",
     "src/modules/categories/**/*.ts",
     [

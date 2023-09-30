@@ -13,15 +13,15 @@ export default class MongooseProvider {
   }
 
   getMongoUrl(configDB: {
-    username: string;
+    ownername: string;
     password: string;
     server: string;
     dialect: string;
     database: string;
   }) {
-    const { username, password, server, dialect, database } = configDB;
+    const { ownername, password, server, dialect, database } = configDB;
 
-    return `${dialect}://${username}:${password}@${server}/?tls=false&authMechanism=DEFAULT`;
+    return `${dialect}://${ownername}:${password}@${server}/?tls=false&authMechanism=DEFAULT`;
   }
 
   setEventListeners() {
@@ -45,7 +45,7 @@ export default class MongooseProvider {
 
   async connect() {
     this.url = this.getMongoUrl({
-      username: this.config.db.username,
+      ownername: this.config.db.ownername,
       password: this.config.db.password,
       server: this.config.db.server,
       database: this.config.db.database,

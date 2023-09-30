@@ -13,7 +13,7 @@ export interface ICategory extends Document {
 export interface ICreateCategory {
   title: string;
   description: string;
-  user_id: string;
+  owner_id: string;
 }
 
 export interface IFilterCategory {
