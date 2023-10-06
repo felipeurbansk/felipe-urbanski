@@ -15,6 +15,14 @@ export interface IProduct extends Document {
   categories: [ICategory];
 }
 
+export interface IProductCatalog {
+  _id: string;
+  title: string;
+  description: string;
+  price: number;
+  categories: [ICategory];
+}
+
 export interface ICreateProduct {
   title: string;
   description: string;

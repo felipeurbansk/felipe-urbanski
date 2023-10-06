@@ -20,7 +20,8 @@
     "paths": {
       "@owners/*": ["modules/owners/*"],
       "@products/*": ["modules/products/*"],
-      "@categories/*": ["modules/categories/*"]
+      "@categories/*": ["modules/categories/*"],
+      "@catalogs/*": ["modules/catalogs/*"]
     }
   },
   "include": ["src/**/*.ts", "index.ts"],

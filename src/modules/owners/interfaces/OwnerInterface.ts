@@ -18,6 +18,12 @@ export interface IOwner extends Document {
   products?: [IProduct];
 }
 
+export interface IOwnerCatalog {
+  _id: string;
+  email: string;
+  name: string;
+}
+
 export interface ICreateOwner {
   name: string;
   email: string;

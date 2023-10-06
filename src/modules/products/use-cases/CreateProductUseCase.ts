@@ -7,6 +7,7 @@ import {
 import CreateProductService from "@products/services/CreateProductService";
 import GetOwnerByIdService from "@owners/services/GetOwnerByIdService";
 import S3Provider from "infrastructure/aws/s3/S3Provider";
+import { IConfig } from "config/env";
 
 export default class CreateProductUseCase {
   private createProductService: CreateProductService;
@@ -14,6 +15,7 @@ export default class CreateProductUseCase {
   private getCategoryByIdService: GetCategoryByIdService;
   private productCreatedPublisher: ProductCreatedPublisher;
   private s3Provider: S3Provider;
+  private config: IConfig;
 
   constructor({
     createProductService,
@@ -21,18 +23,21 @@ export default class CreateProductUseCase {
     getCategoryByIdService,
     productCreatedPublisher,
     s3Provider,
+    config,
   }: {
     createProductService: CreateProductService;
     getOwnerByIdService: GetOwnerByIdService;
     getCategoryByIdService: GetCategoryByIdService;
     productCreatedPublisher: ProductCreatedPublisher;
     s3Provider: S3Provider;
+    config: IConfig;
   }) {
     this.createProductService = createProductService;
     this.getOwnerByIdService = getOwnerByIdService;
     this.getCategoryByIdService = getCategoryByIdService;
     this.productCreatedPublisher = productCreatedPublisher;
     this.s3Provider = s3Provider;
+    this.config = config;
   }
 
   public async handle(data: ICreateProduct): Promise<IProduct> {
@@ -66,12 +71,6 @@ export default class CreateProductUseCase {
     persistedOwner.products?.push(persistedProduct);
 
     await persistedOwner.save();
-
-    await this.s3Provider.uploadFile(
-      "anotai-bucket",
-      `catalog_${persistedOwner._id}.json`,
-      persistedOwner
-    );
 
     await this.productCreatedPublisher.publish(persistedProduct);
 

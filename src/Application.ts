@@ -15,7 +15,7 @@ export default class Application {
     await mongooseProvider.connect();
 
     /** Initialize AMQP subscriptions */
-    await subscriptionService.initialize();
+    // await subscriptionService.initialize();
 
     await server.setup();
   }

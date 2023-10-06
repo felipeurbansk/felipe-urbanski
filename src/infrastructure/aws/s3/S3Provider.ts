@@ -1,9 +1,8 @@
 import {
   S3,
-  PutObjectCommand,
   PutObjectCommandOutput,
+  GetObjectCommandOutput,
 } from "@aws-sdk/client-s3";
-import { IOwner } from "@owners/interfaces/OwnerInterface";
 import { IConfig } from "config/env";
 
 export default class S3Provider {
@@ -13,7 +12,6 @@ export default class S3Provider {
   constructor({ config }: { config: IConfig }) {
     this.config = config;
 
-    console.log({ s3: this.config.aws });
     this.s3 = new S3({
       endpoint: `http://${this.config.aws.s3.host}:${this.config.aws.s3.port}`,
       credentials: {
@@ -28,24 +26,55 @@ export default class S3Provider {
   async uploadFile(
     bucketName: string,
     fileName: string,
-    content: IOwner
-  ): Promise<PutObjectCommandOutput | null> {
+    content: any
+  ): Promise<PutObjectCommandOutput> {
     if (!this.s3) {
       throw new Error("Connection S3 not established");
     }
 
-    try {
-      const response = await this.s3.putObject({
+    const response = await this.s3.putObject({
+      Bucket: bucketName,
+      Key: fileName,
+      Body: JSON.stringify(content),
+      ContentType: "application/json",
+    });
+
+    return response;
+  }
+
+  async getFile(
+    bucketName: string,
+    fileName: string
+  ): Promise<GetObjectCommandOutput> {
+    if (!this.s3) {
+      throw new Error("Connection S3 not established");
+    }
+
+    const response = await this.s3.getObject({
+      Bucket: bucketName,
+      Key: fileName,
+    });
+
+    if (!response.Body) {
+      throw new Error(`Body could not be found: ${fileName}`);
+    }
+
+    return await JSON.parse(await response.Body.transformToString());
+  }
+
+  async checkFileExists(bucketName: string, fileName: string) {
+    return await this.s3
+      .headObject({
         Bucket: bucketName,
         Key: fileName,
-        Body: JSON.stringify(content),
-        ContentType: "application/json",
-      });
+      })
+      .then(() => true)
+      .catch((err) => {
+        if (err.$metadata.httpStatusCode === 404) {
+          return false;
+        }
 
-      return response;
-    } catch (err: any) {
-      console.log(err);
-      throw new Error(`Failed to upload file ${fileName}`);
-    }
+        throw err;
+      });
   }
 }

@@ -47,6 +47,7 @@ container.loadModules(
     "src/modules/owners/**/*.ts",
     "src/modules/products/**/*.ts",
     "src/modules/categories/**/*.ts",
+    "src/modules/catalogs/**/*.ts",
     [
       "src/modules/*/database/mongo/models/*.ts",
       {

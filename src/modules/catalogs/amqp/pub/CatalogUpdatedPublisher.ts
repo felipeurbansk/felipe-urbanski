@@ -1,22 +1,13 @@
-import CatalogUpdatedPublisher from "@catalogs/amqp/pub/CatalogUpdatedPublisher";
 import { IProduct } from "@products/interfaces/ProductInterface";
 import RabbitMQProvider from "infrastructure/amqp/rabbitmq/RabbitMQProvider";
 
-export default class ProductCreatedPublisher {
+export default class CatalogUpdatedPublisher {
   private connection: RabbitMQProvider;
-  private catalogUpdatedPublisher: CatalogUpdatedPublisher;
-  private exchangeName: string = "product.events";
-  private routingKey: string = "product.created";
+  private exchangeName: string = "catalog.events";
+  private routingKey: string = "catalog.created";
 
-  constructor({
-    rabbitMQProvider,
-    catalogUpdatedPublisher,
-  }: {
-    rabbitMQProvider: RabbitMQProvider;
-    catalogUpdatedPublisher: CatalogUpdatedPublisher;
-  }) {
+  constructor({ rabbitMQProvider }: { rabbitMQProvider: RabbitMQProvider }) {
     this.connection = rabbitMQProvider;
-    this.catalogUpdatedPublisher = catalogUpdatedPublisher;
   }
 
   async publish(product: IProduct) {
@@ -38,8 +29,6 @@ export default class ProductCreatedPublisher {
         this.routingKey,
         Buffer.from(JSON.stringify(product))
       );
-
-      await this.catalogUpdatedPublisher.publish(product);
 
       console.log(
         `Publish message from ${this.exchangeName} with routing key ${this.routingKey}`

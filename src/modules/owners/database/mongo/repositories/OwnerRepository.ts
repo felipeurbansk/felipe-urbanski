@@ -27,6 +27,12 @@ export default class OwnerRepository implements IOwnerRepository {
       {
         path: "products",
         model: productModel.model,
+        populate: [
+          {
+            path: "categories",
+            model: categoryModel.model,
+          },
+        ],
       },
       {
         path: "categories",
