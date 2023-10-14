@@ -6,7 +6,8 @@
   "author": "Felipe Urbanski <felipeurbansk@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node-dev -r tsconfig-paths/register index.ts"
+    "dev": "ts-node-dev -r tsconfig-paths/register index.ts",
+    "lint": "eslint {src,test,config}/**/*.ts"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.421.0",
