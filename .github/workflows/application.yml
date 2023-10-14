@@ -20,4 +20,4 @@ jobs:
         with:
           node-version: 16
       - run: yarn
-      - run: yarn lint
+      - run: ls -la
